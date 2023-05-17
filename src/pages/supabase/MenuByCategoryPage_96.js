@@ -9,11 +9,9 @@ const MenuByCategoryPage_96 = () => {
 
   const navigate = useNavigate();
 
-  const getMenuDataByCategory_96 = async (filter = "") => {
+  const getMenuDataByCategory_96 = async () => {
     const response = await fetch(
-      `https://hzllwkixijuoqbropnat.supabase.co/rest/v1/menu_96?category=eq.${
-        filter ? filter : params.category
-      }&select=*`,
+      `https://hzllwkixijuoqbropnat.supabase.co/rest/v1/menu_96?category=eq.${params.category}&select=*`,
       {
         method: "GET",
         headers: {
@@ -35,7 +33,7 @@ const MenuByCategoryPage_96 = () => {
 
   const changeMenuFilter = (filter = "") => {
     navigate(`/supa_menu_96/${filter}`);
-    getMenuDataByCategory_96(filter);
+    getMenuDataByCategory_96();
   };
 
   return (
