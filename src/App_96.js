@@ -6,6 +6,7 @@ import MenuStaticPage_96 from "./pages/local/MenuStaticPage_96";
 import SupaMenuPage_96 from "./pages/supabase/MenuPagea_96";
 import SupaMenuByCategoryPage_96 from "./pages/supabase/MenuByCategoryPage_96";
 import MenuNodePage_96 from "./pages/node/MenuNodePage_96";
+import MenuLocalJsonPage_96 from "./pages/local/MenuLocalJsonPage_96";
 
 const App_96 = () => {
   return (
@@ -18,10 +19,8 @@ const App_96 = () => {
           path="/supa_menu_96/:category"
           element={<SupaMenuByCategoryPage_96 />}
         />
-        <Route
-          path="/node_menu_96"
-          element={<MenuNodePage_96 />}
-        />
+        <Route path="/node_menu_96" element={<MenuNodePage_96 />} />
+        <Route path="/json_menu_96" element={<MenuLocalJsonPage_96 />} />
       </Routes>
     </BrowserRouter>
   );
